@@ -3,55 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LakbayPH travel discovery and trip planning system." />
   <title>LakbayPH | Travel Spot Guide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container nav-bar">
       <a class="logo" href="#home"><span class="logo-mark">✈</span> Lakbay<span>PH</span></a>
-      <nav><a href="#spots">Destinations</a><a href="#categories">Categories</a><a href="#about">About</a></nav>
-      <a class="nav-button" href="#spots">Explore spots</a>
+      <nav><a href="#spots">Destinations</a><a href="#planner">Trip Planner</a><a href="#map-section">Map</a><a href="#about">About</a></nav>
+      <div class="account-actions"><button class="text-button" id="loginButton">Log in</button><button class="nav-button" id="registerButton">Register</button><button class="user-menu hidden" id="userMenu"></button></div>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">✨ GUMALA. TUKLASIN. MAG-ENJOY.</div>
-          <h1>Hanapin ang iyong <span>next escape.</span></h1>
-          <p>Mga pinakagagandang pasyalan sa Pilipinas, nasa isang lugar. Planuhin ang iyong biyahe nang madali at masaya.</p>
-          <a class="primary-button" href="#spots">Tingnan ang destinations →</a>
-        </div>
-        <div class="hero-image"><div class="hero-label"><b>Palawan, Philippines</b><small>Where adventure begins</small></div></div>
-      </div>
-    </section>
+    <section class="hero" id="home"><div class="container hero-grid"><div>
+      <div class="eyebrow">✨ GUMALA. TUKLASIN. MAG-ENJOY.</div><h1>Hanapin ang iyong <span>next escape.</span></h1>
+      <p>Discover beautiful destinations in the Philippines with locations, maps, activities, budgets, and an easy trip planner.</p>
+      <a class="primary-button" href="#spots">Explore destinations →</a>
+    </div><div class="hero-image"><div class="hero-label"><b>Palawan, Philippines</b><small>Where adventure begins</small></div></div></div></section>
 
-    <div class="container search-wrap">
-      <div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Maghanap ng lugar o destinasyon..." /><button id="searchButton">Search</button></div>
-    </div>
+    <div class="container search-wrap"><div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Maghanap ng lugar o destinasyon..." /><button id="searchButton">Search</button></div></div>
 
-    <section id="spots">
-      <div class="container">
-        <div class="section-heading"><div><div class="eyebrow green">Mga destination</div><h2>Saan ang punta mo?</h2></div><p>Piliin ang iyong mood at tuklasin ang mga lugar na swak sa iyong travel goals.</p></div>
-        <div class="categories" id="categories">
-          <button class="category active" data-category="All">Lahat</button><button class="category" data-category="Beach">🏝️ Beach</button><button class="category" data-category="Waterfall">💧 Waterfall</button><button class="category" data-category="Mountain">⛰️ Mountain</button><button class="category" data-category="Park">🌳 Park</button><button class="category" data-category="Historical">🏛️ Historical</button>
-        </div>
-        <div class="spot-grid" id="spotGrid"></div>
-      </div>
-    </section>
+    <section id="spots"><div class="container"><div class="section-heading"><div><div class="eyebrow green">Mga destination</div><h2>Saan ang punta mo?</h2></div><p>Piliin ang iyong mood at tuklasin ang mga lugar na swak sa iyong travel goals.</p></div>
+      <div class="categories" id="categories"><button class="category active" data-category="All">Lahat</button><button class="category" data-category="Beach">🏝️ Beach</button><button class="category" data-category="Waterfall">💧 Waterfall</button><button class="category" data-category="Mountain">⛰️ Mountain</button><button class="category" data-category="Park">🌳 Park</button><button class="category" data-category="Historical">🏛️ Historical</button></div>
+      <div class="spot-grid" id="spotGrid"></div>
+    </div></section>
 
-    <section class="features" id="about"><div class="container"><div class="section-heading light"><div><div class="eyebrow dark">Bakit LakbayPH?</div><h2>Mas madaling magplano,<br>mas masayang bumiyahe.</h2></div><p>Everything you need para sa isang memorable adventure.</p></div><div class="feature-grid">
-      <article><div>📍</div><h3>Exact Location</h3><p>Alamin kung saan eksaktong matatagpuan ang iyong pupuntahan.</p></article><article><div>💸</div><h3>Budget Guide</h3><p>May estimated budget para alam mo ang ihahanda.</p></article><article><div>🏄</div><h3>Fun Activities</h3><p>Hanapin ang puwedeng gawin sa bawat destination.</p></article><article><div>🔎</div><h3>Easy Discovery</h3><p>Search at filter para mabilis mahanap ang perfect spot.</p></article>
-    </div></div></section>
+    <section id="map-section" class="map-section"><div class="container"><div class="section-heading"><div><div class="eyebrow green">Explore the map</div><h2>Hanapin sa mapa</h2></div><p>Pumili ng destination para makita ang approximate location at directions.</p></div><div class="map-layout"><div class="map-card"><iframe id="mapFrame" title="Tourist spot map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=118.5%2C9.2%2C119.5%2C10.2&layer=mapnik&marker=9.8%2C118.7"></iframe></div><div class="map-info"><span class="map-pin">📍</span><h3 id="mapTitle">El Nido, Palawan</h3><p id="mapText">Ipinapakita rito ang approximate map location ng napiling tourist spot.</p><a id="directionsLink" class="primary-button small" target="_blank" rel="noopener">Open directions ↗</a></div></div></div></section>
+
+    <section id="planner"><div class="container"><div class="section-heading"><div><div class="eyebrow green">Plan your trip</div><h2>Book your adventure</h2></div><p>Mag-set ng date, travelers, destination, at flight estimate sa isang form.</p></div><div class="planner-layout"><form class="booking-form" id="bookingForm"><label>Destination<select id="bookingDestination" required></select></label><div class="form-row"><label>Departure airport<select id="airport" required><option value="MNL">Manila (MNL)</option><option value="CEB">Cebu (CEB)</option><option value="DVO">Davao (DVO)</option></select></label><label>Travel date<input id="travelDate" type="date" required></label></div><div class="form-row"><label>Travelers<input id="travelers" type="number" min="1" max="20" value="1" required></label><label>Trip type<select id="tripType"><option value="round">Round trip</option><option value="oneway">One way</option></select></label></div><div class="estimate-box"><span>Estimated flight price</span><strong id="flightPrice">₱0</strong><small>Demo estimate only. Actual airline prices may change.</small></div><button class="primary-button full" type="submit">Continue booking →</button></form><aside class="booking-summary"><span class="summary-icon">🧳</span><h3>Your booking benefits</h3><p>Save your trip details, view your booking receipt, and manage your plans from this browser.</p><ul><li>✓ Destination map</li><li>✓ Flight price estimate</li><li>✓ Budget and activities</li><li>✓ Booking reference number</li></ul></aside></div></div></section>
+
+    <section class="features" id="about"><div class="container"><div class="section-heading light"><div><div class="eyebrow dark">Bakit LakbayPH?</div><h2>Mas madaling magplano,<br>mas masayang bumiyahe.</h2></div><p>Everything you need para sa isang memorable adventure.</p></div><div class="feature-grid"><article><div>📍</div><h3>Exact Location</h3><p>Alamin kung saan eksaktong matatagpuan ang iyong pupuntahan.</p></article><article><div>💸</div><h3>Budget Guide</h3><p>May estimated budget para alam mo ang ihahanda.</p></article><article><div>🏄</div><h3>Fun Activities</h3><p>Hanapin ang puwedeng gawin sa bawat destination.</p></article><article><div>🔎</div><h3>Easy Discovery</h3><p>Search at filter para mabilis mahanap ang perfect spot.</p></article></div></div></section>
   </main>
   <footer>© 2025 LakbayPH · Gawa para sa mga manlalakbay na Pinoy 🇵🇭</footer>
 
-  <div class="modal" id="spotModal"><div class="modal-card"><button class="close" id="closeModal">×</button><div class="modal-image" id="modalImage"></div><div class="modal-content"><h2 id="modalTitle"></h2><div class="modal-location" id="modalLocation"></div><p id="modalDescription"></p><div class="modal-info" id="modalInfo"></div></div></div></div>
+  <div class="modal" id="spotModal"><div class="modal-card"><button class="close" id="closeModal">×</button><div class="modal-image" id="modalImage"></div><div class="modal-content"><h2 id="modalTitle"></h2><div class="modal-location" id="modalLocation"></div><p id="modalDescription"></p><div class="modal-info" id="modalInfo"></div><button class="primary-button full" id="bookSpotButton">Book this destination</button></div></div></div>
+  <div class="modal" id="authModal"><div class="auth-card"><button class="close" id="closeAuth">×</button><div class="auth-tabs"><button class="auth-tab active" data-auth="login">Log in</button><button class="auth-tab" data-auth="register">Register</button></div><form id="authForm"><h2 id="authTitle">Welcome back!</h2><p id="authHint">Log in to save your bookings and favorite spots.</p><label id="nameField" class="hidden">Full name<input id="authName" type="text"></label><label>Email<input id="authEmail" type="email" required></label><label>Password<input id="authPassword" type="password" minlength="6" required></label><button class="primary-button full" type="submit" id="authSubmit">Log in</button><div class="form-message" id="authMessage"></div></form></div></div>
+  <div class="modal" id="receiptModal"><div class="receipt-card"><button class="close" id="closeReceipt">×</button><div class="success">✓</div><h2>Booking request saved!</h2><p id="receiptText"></p><div class="receipt-code" id="receiptCode"></div><button class="primary-button full" id="receiptDone">Done</button></div></div>
+  <div class="toast" id="toast"></div>
   <script src="script.js"></script>
 </body>
 </html>
