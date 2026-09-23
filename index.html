@@ -1,56 +1,14 @@
 <!doctype html>
 <html lang="fil">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LakbayPH Travel Spot</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LakbayPH Travel Portal</title><link rel="stylesheet" href="style.css"></head>
 <body>
-  <section id="authView" class="auth-page">
-    <div class="auth-card">
-      <a class="logo" href="#">✈ Lakbay<span>PH</span></a>
-      <h1 id="authTitle">Welcome back!</h1>
-      <p id="authText">Mag-login muna para makapasok sa travel dashboard.</p>
-      <form id="authForm">
-        <label>Username<input id="username" type="text" required autocomplete="username"></label>
-        <label id="emailField" class="hidden">Email<input id="email" type="email" autocomplete="email"></label>
-        <label>Password<input id="password" type="password" minlength="6" required autocomplete="current-password"></label>
-        <button class="primary full" type="submit" id="authButton">Log in</button>
-        <p class="form-message" id="authMessage"></p>
-      </form>
-      <button class="switch-button" type="button" id="switchAuth">Wala pang account? Register</button>
-    </div>
-  </section>
-
-  <div id="appView" class="hidden">
-    <header><div class="container nav">
-      <a class="logo" href="#home">✈ Lakbay<span>PH</span></a>
-      <nav><a href="#spots">Destinations</a><a href="#planner">Booking</a><a href="#about">About</a></nav>
-      <div class="account"><span id="welcome"></span><button class="logout" id="logout">Log out</button></div>
-    </div></header>
-
-    <main>
-      <section class="hero" id="home"><div class="container hero-grid">
-        <div><small class="eyebrow">✨ GUMALA. TUKLASIN. MAG-ENJOY.</small><h2>Hanapin ang iyong <span>next escape.</span></h2><p>Discover beautiful Philippine destinations with descriptions, activities, budgets, and trip planning.</p><a class="primary" href="#spots">Explore destinations →</a></div>
-        <div class="hero-image"><div class="image-label"><b>Palawan, Philippines</b><small>Where adventure begins</small></div></div>
-      </div></section>
-
-      <div class="container search-wrap"><div class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Maghanap ng lugar o destinasyon..."><button id="searchButton">Search</button></div></div>
-
-      <section id="spots"><div class="container"><div class="section-title"><div><small class="section-label">POPULAR SPOTS</small><h2>Saan ang punta mo?</h2></div><p>Search by name or choose a category.</p></div><div class="categories" id="categories"></div><div class="spot-grid" id="spotGrid"></div></div></section>
-
-      <section id="planner"><div class="container"><div class="section-title"><div><small class="section-label">TRIP PLANNER</small><h2>Book your adventure</h2></div><p>Mag-book ng travel plan pagkatapos mag-login.</p></div><div class="planner-grid">
-        <form class="panel" id="bookingForm"><label>Destination<select id="destination"></select></label><div class="form-row"><label>Airport<select id="airport"><option value="MNL">Manila (MNL)</option><option value="CEB">Cebu (CEB)</option><option value="DVO">Davao (DVO)</option></select></label><label>Date<input id="travelDate" type="date" required></label></div><div class="form-row"><label>Travelers<input id="travelers" type="number" min="1" max="20" value="1" required></label><label>Trip type<select id="tripType"><option value="2">Round trip</option><option value="1">One way</option></select></label></div><div class="estimate"><span>Estimated flight price</span><strong id="flightPrice">₱0</strong><small>Demo estimate only. Actual airline prices may change.</small></div><button class="primary full" type="submit">Save booking</button></form>
-        <aside class="panel summary"><div class="summary-icon">🧳</div><h3>Trip checklist</h3><p>Plan your vacation with these helpful features.</p><ul><li>✓ Destination details</li><li>✓ Activities and budget</li><li>✓ Flight estimate</li><li>✓ Booking reference</li></ul></aside>
-      </div></div></section>
-
-      <section class="features" id="about"><div class="container"><div class="section-title light"><div><small class="section-label">FEATURES</small><h2>Plan easier. Travel better.</h2></div><p>Simple tools for your next Philippine adventure.</p></div><div class="feature-grid"><article>📍<h3>Exact Location</h3><p>See the place and location details.</p></article><article>💸<h3>Budget Guide</h3><p>Check estimated travel expenses.</p></article><article>🏄<h3>Activities</h3><p>Discover things you can do.</p></article><article>🔎<h3>Smart Search</h3><p>Find spots by name or category.</p></article></div></div></section>
-    </main><footer>© 2025 LakbayPH · Travel smarter and explore more 🇵🇭</footer>
-  </div>
-
-  <div class="modal hidden" id="spotModal"><div class="modal-card"><button class="close" id="closeModal">×</button><h2 id="modalTitle"></h2><p class="muted" id="modalLocation"></p><p class="muted" id="modalDescription"></p><div class="info-grid" id="modalInfo"></div><button class="primary full" id="bookSpot">Book this destination</button></div></div>
-  <div class="toast" id="toast"></div>
-  <script src="script.js"></script>
-</body>
-</html>
+<section id="authView" class="auth-page"><div class="auth-card"><a class="logo" href="#">✈ Lakbay<span>PH</span></a><h1 id="authTitle">Welcome back!</h1><p id="authText">Mag-login muna para makapasok sa travel dashboard.</p><form id="authForm"><label>Username<input id="username" required autocomplete="username"></label><label id="emailField" class="hidden">Email<input id="email" type="email"></label><label>Password<input id="password" type="password" minlength="6" required autocomplete="current-password"></label><button class="primary full" id="authButton">Log in</button><p id="authMessage" class="form-message"></p></form><button class="switch-button" id="switchAuth" type="button">Wala pang account? Register</button></div></section>
+<div id="appView" class="hidden"><header><div class="container nav"><a class="logo" href="#home">✈ Lakbay<span>PH</span></a><nav><a href="#spots">Destinations</a><a href="#planner">Booking</a><a href="#about">Features</a></nav><div class="account"><span id="welcome"></span><button class="database-button" id="databaseButton">📋 Bookings</button><button class="logout" id="logout">Log out</button></div></div></header>
+<main><section class="hero" id="home"><div class="container hero-grid"><div><small class="eyebrow">✨ GUMALA. TUKLASIN. MAG-ENJOY.</small><h2>Hanapin ang iyong <span>next escape.</span></h2><p>Discover Philippine destinations with real place-focused photos, activities, budgets, and travel planning.</p><a class="primary" href="#spots">Explore destinations →</a></div><div class="hero-image"><div class="image-label"><b>Palawan, Philippines</b><small>Where adventure begins</small></div></div></div></section>
+<div class="container search-wrap"><div class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Maghanap ng lugar o destinasyon"><button id="searchButton">Search</button></div></div>
+<section id="spots"><div class="container"><div class="section-title"><div><small class="section-label">POPULAR SPOTS</small><h2>Saan ang punta mo?</h2></div><p>Search by name or choose a category to explore destinations.</p></div><div class="categories" id="categories"></div><div class="spot-grid" id="spotGrid"></div></div></section>
+<section id="planner"><div class="container"><div class="section-title"><div><small class="section-label">TRIP PLANNER</small><h2>Book your adventure</h2></div><p>Ang booking ay awtomatikong pumapasok sa iyong booking portal.</p></div><div class="planner-grid"><form class="panel" id="bookingForm"><label>Destination<select id="destination"></select></label><div class="form-row"><label>Airport<select id="airport"><option value="MNL">Manila (MNL)</option><option value="CEB">Cebu (CEB)</option><option value="DVO">Davao (DVO)</option></select></label><label>Date<input id="travelDate" type="date" required></label></div><div class="form-row"><label>Travelers<input id="travelers" type="number" min="1" max="20" value="1" required></label><label>Trip type<select id="tripType"><option value="2">Round trip</option><option value="1">One way</option></select></label></div><div class="estimate"><span>Estimated flight price</span><strong id="flightPrice">₱0</strong><small>Demo estimate only; actual airline prices may change.</small></div><button class="primary full" type="submit">Save booking →</button></form><aside class="panel summary"><div class="summary-icon">🧳</div><h3>Trip checklist</h3><p>Plan your vacation with useful tools.</p><ul><li>✓ Destination details</li><li>✓ Activities and budget</li><li>✓ Flight estimate</li><li>✓ Booking portal</li></ul></aside></div></div></section>
+<section class="features" id="about"><div class="container"><div class="section-title light"><div><small class="section-label">FEATURES</small><h2>Plan easier. Travel better.</h2></div><p>Tap any feature to use it.</p></div><div class="feature-grid"><button class="feature" data-feature="activities">🏄<h3>Activities</h3><p>See activities available at destinations.</p></button><button class="feature" data-feature="budget">💸<h3>Budget Guide</h3><p>Compare estimated trip budgets.</p></button><button class="feature" data-feature="favorites">❤️<h3>Favorites</h3><p>Save spots you want to visit.</p></button><button class="feature" data-feature="bookings">📋<h3>Booking Portal</h3><p>View and manage your saved bookings.</p></button></div></div></section>
+</main><footer>© 2025 LakbayPH · Travel smarter and explore more 🇵🇭</footer></div>
+<div class="modal hidden" id="spotModal"><div class="modal-card"><button class="close" id="closeModal">×</button><div class="modal-image" id="modalImage"></div><div class="modal-content"><h2 id="modalTitle"></h2><p class="muted" id="modalLocation"></p><p class="muted" id="modalDescription"></p><div class="info-grid" id="modalInfo"></div><a class="primary full map-button" id="googleMapsButton" target="_blank" rel="noopener">Open in Google Maps ↗</a><button class="primary full" id="bookSpot">Book this destination</button></div></div></div>
+<div class="modal hidden" id="bookingModal"><div class="modal-card booking-database"><button class="close" id="closeBookings">×</button><div class="modal-content"><h2>📋 Booking Portal</h2><p class="muted">Saved bookings for the logged-in traveler.</p><div id="bookingList"></div><button class="danger-button" id="clearBookings">Clear all bookings</button></div></div></div><div class="toast" id="toast"></div><script src="script.js"></script></body></html>
